@@ -12,6 +12,8 @@ public class PointerEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     [SerializeField] private Color enterColor = Color.white;
     [SerializeField] private Color downColor = Color.white;
     [SerializeField] private UnityEvent OnClick = new UnityEvent();
+    [SerializeField] private Canvas canvas = null;
+
 
     private MeshRenderer meshRenderer = null;
 
@@ -21,18 +23,34 @@ public class PointerEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         outline = GetComponent<Outline>();
         if (outline != null)
         {
-            outline.enabled = false; 
+            outline.enabled = false;
+            canvas.enabled = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (OVRInput.Get(OVRInput.Button.Two) && outline.enabled)
+        {
+            Debug.Log("B PRESSED");
+            canvas.enabled = true;
+
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (outline != null)
-        {
-            outline.enabled = true; // Enable the outline when pointer enters
-        }
+        
+        outline.enabled = true; // Enable the outline when pointer enters
         //meshRenderer.material.color = enterColor;
         print("Enter");
+        if (OVRInput.GetDown(OVRInput.Button.Two))
+        {
+            Debug.Log("B PRESSED");
+            canvas.enabled = true;
+
+        }
+
     }
 
     public void OnPointerExit(PointerEventData eventData)
