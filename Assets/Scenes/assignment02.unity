@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.29964846, g: 0.32542974, b: 0.5919529, a: 1}
+  m_IndirectSpecularColor: {r: 0.5636003, g: 0.52542824, b: 0.918076, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1796,16 +1796,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsPointer
       objectReference: {fileID: 0}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1349187015}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1334502124}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
---- !u!20 &630536554 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1976577297550892596, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
-  m_PrefabInstance: {fileID: 630536553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &630536555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1976577297550892593, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
@@ -2636,7 +2639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1fa4d0413ac7344a73e19159c1741a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCamera: {fileID: 630536554}
+  eventCamera: {fileID: 1942635425}
   clickButton: 8192
   controller: 3
 --- !u!1 &918185407
@@ -3288,6 +3291,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsPointer
       objectReference: {fileID: 0}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1349187015}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1334502124}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3578,6 +3589,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!120 &1334502124 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 6782995052807465818, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+  m_PrefabInstance: {fileID: 630536553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1341670407
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,6 +3697,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!120 &1349187015 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 6782995052807465818, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+  m_PrefabInstance: {fileID: 1220324333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359611740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4746,6 +4767,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhysicsPointer
       objectReference: {fileID: 0}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 1349187015}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 1334502124}
+    - target: {fileID: 7550720676458005861, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5367,8 +5400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e81bc5ebb2c9c459feedef4a66c3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRendererLeft: {fileID: 1818317171}
-  lineRendererRight: {fileID: 1818317171}
+  lineRendererLeft: {fileID: 1349187015}
+  lineRendererRight: {fileID: 1334502124}
   controllerLeft: {fileID: 1895267327}
   controllerRight: {fileID: 2135743304}
 --- !u!120 &1818317171
@@ -5379,7 +5412,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818317167}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6082,6 +6115,11 @@ Transform:
 --- !u!4 &1942635421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1976577297550892593, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
+  m_PrefabInstance: {fileID: 1671129160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1942635425 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1976577297550892596, guid: de1ee31ece2d7924ca82140dfb24366c, type: 3}
   m_PrefabInstance: {fileID: 1671129160}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1985163331
